@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://44ailab.github.io/surprising-japan/sitemap.xml

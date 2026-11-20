@@ -1,0 +1,249 @@
+/* Surprising Japan — book hub. Readability first: large type, wide line spacing, generous margins. */
+
+:root {
+  --ink: #26303c;
+  --navy: #1f3a5f;
+  --navy-dark: #16294a;
+  --accent: #b23a2e;
+  --paper: #fdfcf9;
+  --card: #ffffff;
+  --line: #e3ddcf;
+  --muted: #5c6672;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Noto Sans JP",
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.85;
+  -webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.5rem 1.4rem 3.5rem;
+}
+
+header.site {
+  border-bottom: 3px solid var(--navy);
+  padding-bottom: 1.1rem;
+  margin-bottom: 2.2rem;
+}
+
+header.site a.brand {
+  color: var(--navy);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+header.site a.brand:hover {
+  color: var(--accent);
+}
+
+h1 {
+  color: var(--navy-dark);
+  font-size: 1.9rem;
+  line-height: 1.45;
+  margin: 0 0 1.4rem;
+  font-weight: 800;
+}
+
+h2 {
+  color: var(--navy);
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 2.6rem 0 0.9rem;
+  padding-left: 0.7rem;
+  border-left: 5px solid var(--accent);
+}
+
+p {
+  margin: 0 0 1.15rem;
+}
+
+.lead {
+  font-size: 1.08rem;
+}
+
+a {
+  color: var(--navy);
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Book call-to-action box at the foot of every tasting page */
+.book-box {
+  margin-top: 3rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--navy);
+  border-radius: 10px;
+  padding: 1.6rem 1.5rem 1.4rem;
+}
+
+.book-box p {
+  margin-bottom: 0.9rem;
+}
+
+.book-box p:last-child {
+  margin-bottom: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 0.25rem 0.6rem 0.25rem 0;
+  padding: 0.65rem 1.3rem;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.btn:hover {
+  background: var(--navy-dark);
+  color: #fff;
+}
+
+.btn.free {
+  background: var(--accent);
+}
+
+.btn.free:hover {
+  background: #933026;
+}
+
+/* Index page: month cards */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.15rem 1.2rem 1rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.card:hover {
+  border-color: var(--navy);
+  color: var(--ink);
+}
+
+.card .month {
+  display: block;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.card .card-title {
+  display: block;
+  color: var(--navy-dark);
+  font-weight: 700;
+  font-size: 1.06rem;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.card .card-desc {
+  display: block;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+footer.site {
+  margin-top: 3.2rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+}
+
+footer.site h2 {
+  border-left: none;
+  padding-left: 0;
+  margin-top: 0;
+  font-size: 1.05rem;
+}
+
+footer.site ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+footer.site li {
+  margin-bottom: 0.55rem;
+  break-inside: avoid;
+  line-height: 1.55;
+}
+
+footer.site a {
+  text-decoration: none;
+}
+
+footer.site a:hover {
+  text-decoration: underline;
+}
+
+footer.site .fineprint {
+  margin-top: 1.8rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 17px;
+  }
+
+  .wrap {
+    padding: 1.8rem 1.1rem 3rem;
+  }
+
+  h1 {
+    font-size: 1.55rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  footer.site ul {
+    columns: 1;
+  }
+
+  .btn {
+    display: block;
+    text-align: center;
+    margin-right: 0;
+  }
+}
